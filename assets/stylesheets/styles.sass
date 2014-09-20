@@ -1,0 +1,178 @@
+@import "variables"
+@import "mixins"
+@import "fonts"
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+  background-color: $darkblue
+
+.header
+  position: fixed
+  z-index: 99999999
+  background-color: $darkblue
+  // background: -webkit-linear-gradient($lightblue, $darkblue) /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient($lightblue, $darkblue) For Opera 11.1 to 12.0
+  // background: -moz-linear-gradient($lightblue, $darkblue) /* For Firefox 3.6 to 15 */
+  // background: linear-gradient($lightblue, $darkblue) /* Standard syntax */
+  img
+    height: 50px
+    margin: 3px
+    border: 1px solid white
+    display: inline-block
+  .name
+    display: inline-block
+    margin-left: 30px
+    color: white
+    font-size: 20px
+    font-style: bold
+.page
+  margin: 0 auto
+  padding: 60px 0 10px 0
+  // padding-bottom: 10px
+  height: 100vh
+  // background-color: $darkblue
+
+  // width: 100%
+  &.first-page
+    text-align: center
+    position: relative
+    background-color: $darkblue
+    .content
+      position: relative
+      top: 20%
+      .title
+        // position: relative
+        font-size: 100px
+        color: white
+      .introduction
+        margin: 0 auto
+        font-size: 30px
+        width: 60%
+        color: white
+      .discover
+        button
+          background-color: white
+          color: $darkblue
+          border: none
+          margin-top: 10vh
+          font-size: 30px
+          border-radius: 5px
+          padding: 5px 10px
+
+  &.second-page
+    .tile
+      .rounded-box
+        text-align: center
+        font-size: 90px
+        background-color: $lightblue
+        height: 45vh
+        border-radius: 2px
+        .symbol
+          color: $darkblue
+        .stats
+          text-align: left
+          padding-left: 10px
+          padding-right: 10px
+          font-size: 30px
+          color: white
+    .bottom-bar
+      margin-top: 30px
+      margin-bottom: 10px
+      .rounded-box
+        text-align: center
+        font-size: 70px
+        background-color: $lightblue
+        height: 39vh
+        border-radius: 2px
+        .symbol
+          color: $darkblue
+        .plan-options
+          position: relative
+          height: 30vh
+          color: white
+          h1
+            font-size: 50px
+            color: $darkblue
+            margin: 0px
+            font-style: bold
+            &.price
+              position: absolute
+              bottom: 20px
+              left: 25%
+          ul
+            font-size: 30px
+    button.business
+      position: absolute
+      bottom: 0
+      left: 45%
+      background-color: white
+      color: $darkblue
+      margin-top: 10vh
+      font-size: 30px
+      border-radius: 5px
+      padding: 5px 10px
+
+  &.third-page
+    background-color: white
+    .search-bar
+      // margin-top: 60px
+      height: 100%
+      background-color: transparent
+      form
+        p
+          color: $lightblue
+          font-size: 20px
+          margin-top: 20px
+        input
+          width: 100%
+          height: 30px
+          padding-left: 10px
+          background-color: $darkblue
+          display: block
+          border: none
+          border-radius: 5px
+          margin-top: 5px
+      .graph-results
+        text-align: center
+        .bar-chart
+          margin-top: 20px
+          height: 30vh
+          img
+            height: 30vh
+        .pie-chart
+          #chart_div
+            background-color: transparent
+            margin-top: 20px
+            height: 30vh
+
+    .map-container
+      height: 100%
+      overflow: hidden
+      padding: 0
+      padding-left: 10px
+      // border: 1px solid $darkblue
+      #mapCanvas
+        height: 100%
+        padding: 0px
+        margin: 0px
+    // .business
+      // margin-top: 60px
+
+
+
+*::-webkit-input-placeholder
+  color: $lightblue
+
+*:-moz-placeholder
+  /* FF 4-18 */
+  color: $lightblue
+
+*::-moz-placeholder
+  /* FF 19+ */
+  color: $lightblue
+
+*:-ms-input-placeholder
+  /* IE 10+ */
+  color: $lightblue

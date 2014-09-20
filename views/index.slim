@@ -1,0 +1,100 @@
+.header.col-md-12
+  img src="logo.jpg"
+  .name TweetFeet
+.first-page.page.col-md-12
+  .content
+    .title TweetFeet
+    .introduction Tweetfeet is designed to help you expand your business by highlighting key demographs through twitter.
+    .discover
+      button Discover more
+.second-page.page.col-md-12
+  .tile.col-md-3
+    .rounded-box
+      .symbol
+        i.fa.fa-users
+      .stats
+        ul
+          li 271 million monthly active Twitter users
+          li 500 million Tweets are sent per day
+  .tile.col-md-3
+    .rounded-box
+      .symbol
+        i.fa.fa-laptop
+      .stats
+        ul
+          li Map your audience by country, state or city
+          li Refine the trending hashtag with filters
+          li Discover suggest optimal time for tweeting
+  .tile.col-md-3
+    .rounded-box
+      .symbol
+        i.fa.fa-area-chart
+      .stats
+        ul
+          li Simple graphs help you discover usage patterns
+          li Use different filters and combine datasets to come up with new models
+  .tile.col-md-3
+    .rounded-box
+      .symbol
+        i.fa.fa-check-square-o
+      .stats
+        ul
+          li Plan new promotional tweets
+          li Reach a wider and more targeted audience
+          li Reach audiences for geo-targeted events.
+  .bottom-bar.col-md-12
+    .rounded-box
+      .symbol
+        i.fa.fa-gbp
+      .plan-options.col-md-4
+        h1 Basic
+        ul
+          li Search upto two keywords at a time
+          li See results displayed on a heatmap
+          li See time at which tweets are made
+        h1.price
+          i.fa.fa-gbp 5 a month
+      .plan-options.col-md-4
+        h1 Premium
+        ul
+          li Basic plan plus...
+          li Search unlimited keywords at a time
+        h1.price
+          i.fa.fa-gbp 7 a month
+      .plan-options.col-md-4
+        h1 Advanced
+        ul
+          li Premium plan plus...
+          li Guage peoples sentiment to your keywords
+        h1.price
+          i.fa.fa-gbp 10 a month
+  button.business Try it now
+.third-page.page.col-md-12
+  .search-bar.col-md-3
+    form
+      p Refine your search...
+      input type="text" placeholder="Location"
+      input type="text" placeholder="Keywords"
+      input type="text" placeholder="Sentiment"
+    .graph-results
+      .bar-chart
+        #column_chart_div
+      .pie-chart
+        #chart_div
+        / img src="pie_chart.png"
+
+  .map-container.col-md-9
+    #mapCanvas
+  / .business
+
+
+javascript:
+  $('.discover button').on('click', function ()
+  {
+      $('html, body').animate({scrollTop: $(".second-page").offset().top + 'px'});
+  });
+
+    $('.business').on('click', function ()
+  {
+      $('html, body').animate({scrollTop: $(".third-page").offset().top + 'px'});
+  });
