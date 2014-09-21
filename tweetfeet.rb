@@ -10,7 +10,6 @@ TweetStream.configure do |config|
   config.auth_method        = :oauth
 end
 
-tweets= Array.new 
 
   get '/' do
     slim :index
@@ -39,5 +38,3 @@ tweets= Array.new
     filename = params[:splat].first
     send_file settings.root + "/vendor/javascripts/" + filename + ".js"
   end
-
-
