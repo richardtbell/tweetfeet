@@ -10,10 +10,21 @@ TweetStream.configure do |config|
   config.auth_method        = :oauth
 end
 
-tweets= Array.new 
+tweets= Array.new
 
   get '/' do
     slim :index
+  end
+
+  post '/keywords' do
+    keywords = params[:keywords]
+    p keywords
+    keywords.each do |k,v|
+      TweetStream::Client.new.track(v) do |status|
+        p status.text
+        # puts "#{status.time}"
+      end
+    end
   end
 
   get '/stylesheets/*.css' do

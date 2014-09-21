@@ -1,5 +1,5 @@
 .header.col-md-12
-  img src="logo.jpg"
+  img src="LogoTweetfeet.png"
   .name TweetFeet
 .first-page.page.col-md-12
   .content
@@ -71,13 +71,14 @@
   button.business Try it now
 .third-page.page.col-md-12
   .search-bar.col-md-3
-    form
+    form action='/keywords' method='POST'
       p Refine your search...
-      input.Location type="text" placeholder="Location"
-      input.searchBar type="text" placeholder="Keywords"
-      input type="text" placeholder="Sentiment"
+      input.Location type="text" name="location" placeholder="Location"
+      input type="text" name="keywords[keywords]" placeholder="Keywords"
+      input type="text" name="sentiment" placeholder="Sentiment"
+      input type="submit"
     .graph-results
-      .bar-chart 
+      .bar-chart
         #column_chart_div
       .pie-chart
         #chart_div
