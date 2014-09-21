@@ -73,15 +73,15 @@
   .search-bar.col-md-3
     form
       p Refine your search...
-      input type="text" placeholder="Location"
-      input type="text" placeholder="Keywords"
+      input.Location type="text" placeholder="Location"
+      input.searchBar type="text" placeholder="Keywords"
       input type="text" placeholder="Sentiment"
     .graph-results
-      .bar-chart
+      .bar-chart 
         #column_chart_div
       .pie-chart
         #chart_div
-        / img src="pie_chart.png"
+        / img src="pie_chart.png" class="img-responsive"
 
   .map-container.col-md-9
     #mapCanvas

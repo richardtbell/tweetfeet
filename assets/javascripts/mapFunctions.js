@@ -12,11 +12,7 @@ var strictBounds = new google.maps.LatLngBounds(
       'Edinburgh': new google.maps.LatLng(55.953252 , -3.188267),
       'Liverpool': new google.maps.LatLng(53.408371 , -2.991573),
       'Manchester': new google.maps.LatLng(53.479324 , -2.248485)
-      },
-    heatmapData = [
-      new google.maps.LatLng(53.479324 , -2.248485),
-      new google.maps.LatLng(53.479324 , -2.248485)
-    ];
+      };
 
 var infowindow = new google.maps.InfoWindow({
     content: 'holding...'
@@ -33,11 +29,10 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
   setListeners(map);
   setMarkers(map);
-  createHeatmap(map);
   return map;
 }
 
-var map = initialize();
+map = initialize();
 
 
 function setListeners(map) {
@@ -84,14 +79,6 @@ function setInfWindowContent(marker) {
   '<img src="/grumpyCat.png" width=150></img></div>';
   return contentString;
 }
-
-function createHeatmap(map) {
-  var heatMap = new google.maps.visualization.HeatmapLayer({
-    // data: heatmapData
-  });
-  heatMap.setMap(map)
-}
-
 
 
 });

@@ -1,5 +1,16 @@
 require 'sinatra'
 require 'slim'
+require 'tweetstream'
+
+TweetStream.configure do |config|
+  config.consumer_key       = 'V5Rdm75azw7GEbETrGbkmFnBW'
+  config.consumer_secret    = 'vpeBFyIVGNszdy4chinBxXFptlL0YYKdU9p8GAoKvi9MSFBgUx'
+  config.oauth_token        = '56434968-6hGxoQmOwnncBAbrKEX4TDU6ILm9mdihZhp8BtSGy'
+  config.oauth_token_secret = 'CMYv2oRQRIhFkYifY8UBTnPhF0Ds6Qg5q6dbcu3IaIHgm'
+  config.auth_method        = :oauth
+end
+
+tweets= Array.new 
 
   get '/' do
     slim :index
@@ -28,3 +39,5 @@ require 'slim'
     filename = params[:splat].first
     send_file settings.root + "/vendor/javascripts/" + filename + ".js"
   end
+
+
