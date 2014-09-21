@@ -1,4 +1,13 @@
 $(function (){
+
+
+    $("#location").on("change", function() {
+      console.log("jj");
+      console.log(document.getElementById("map-canvas").contentWindow.map);
+        document.getElementById("map-canvas").contentWindow.map.setZoom(8);
+        document.getElementById("map-canvas").contentWindow.map.setCenter(document.getElementById("map-canvas").contentWindow.myCities[$(this).val()]);
+    });
+
   var myCities = {
       'London': [51.47 , -0.119476],
       'Aberdeen': [57.1 , -2.27],
