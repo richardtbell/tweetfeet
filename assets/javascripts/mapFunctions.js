@@ -4,7 +4,7 @@ $(function() {
 var strictBounds = new google.maps.LatLngBounds(
   new google.maps.LatLng(50.345460, -7.844238),
   new google.maps.LatLng(58.470721, 1.834473)
-  ),
+  );
   myCities = {
       'London': new google.maps.LatLng(51.507351 , -0.127758),
       'Aberdeen': new google.maps.LatLng(57.149717 , -2.094278),
@@ -79,6 +79,11 @@ function setInfWindowContent(marker) {
   '<img src="/grumpyCat.png" width=150></img></div>';
   return contentString;
 }
+
+$("#location").on("change", function() {
+  map.setZoom(8);
+  map.setCenter(myCities[$(this).val()]);
+});
 
 
 });

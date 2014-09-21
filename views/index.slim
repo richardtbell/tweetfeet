@@ -73,7 +73,13 @@
   .search-bar.col-md-3
     form
       p Refine your search...
-      input.Location type="text" placeholder="Location"
+      select.Location#location 
+        option Aberdeen
+        option Edinburgh
+        option Glasgow
+        option Liverpool
+        option Manchester
+        option London
       input.searchBar type="text" placeholder="Keywords"
       input type="text" placeholder="Sentiment"
     .graph-results
