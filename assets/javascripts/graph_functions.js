@@ -1,5 +1,10 @@
 // script type="text/javascript"
 
+  $(document).ready(function () {
+    $(window).resize(function(){
+    drawChart();
+    });
+  });
   // Load the Visualization API and the piechart package.
   google.load('visualization', '1.0', {'packages':['corechart']});
 
@@ -9,6 +14,7 @@
     // Callback that creates and populates a data table,
   // instantiates the pie chart, passes in the data and
   // draws it.
+
   function drawChart() {
 
     // Create the data table.
@@ -25,8 +31,6 @@
 
     // Set chart options
     var options = {'title':'What people are tweeting about',
-                   'width':400,
-                   'height':300,
                    'backgroundColor': { fill:'transparent' },
                    'colors': ['#003856', '#005A89', '#007BBC', '#009CEF', '#23B3FF']
                   };
@@ -65,8 +69,6 @@
 
     var options = {
       title: 'Edinburgh Tweets per hour',
-      width: 400,
-      height: 300,
       hAxis: {title: 'Time', titleTextStyle: {color: '#003856'}},
       legend: { position: "none" },
       backgroundColor: { fill:'transparent' },
